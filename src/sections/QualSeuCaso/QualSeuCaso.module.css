@@ -1,0 +1,57 @@
+.trilho {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: 26px;
+}
+
+@media (max-width: 900px) {
+  .trilho {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 10px;
+  }
+
+  .trilho > * {
+    flex: 0 0 76%;
+    scroll-snap-align: start;
+  }
+}
+
+.perfil {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 24px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  text-decoration: none;
+  transition:
+    transform 0.25s,
+    border-color 0.25s;
+}
+
+.perfil:hover {
+  transform: translateY(-8px);
+  border-color: var(--lime);
+}
+
+.perfil::after {
+  content: '→';
+  margin-top: auto;
+  padding-top: 12px;
+  color: var(--lime);
+  font-size: 28px;
+  font-weight: 800;
+  transition: transform 0.25s;
+}
+
+.perfil:hover::after {
+  transform: translateX(10px);
+}
+
+.icone {
+  font-size: 38px;
+}

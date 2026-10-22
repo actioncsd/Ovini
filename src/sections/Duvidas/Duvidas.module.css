@@ -1,0 +1,33 @@
+.duvida {
+  max-width: 820px;
+  margin-bottom: 12px;
+  padding: 0 22px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+}
+
+.pergunta {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px 0;
+  font-weight: 700;
+  list-style: none;
+  cursor: pointer;
+}
+
+.pergunta::-webkit-details-marker {
+  display: none;
+}
+
+.pergunta::after {
+  content: '+';
+  color: var(--lime);
+  font-size: 26px;
+  line-height: 1;
+}
+
+.duvida[open] .pergunta::after {
+  content: '–';
+}

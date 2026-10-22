@@ -1,0 +1,33 @@
+.faixa {
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  margin: -6px -10px;
+  transform: rotate(-1deg);
+  background: var(--lime);
+  color: var(--on-lime);
+  font-size: 18px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.trilha {
+  display: inline-flex;
+  padding: 14px 0;
+  animation: rolar 28s linear infinite;
+}
+
+.trilha span {
+  padding: 0 22px;
+}
+
+.trilha span::after {
+  content: '✦';
+  margin-left: 44px;
+}
+
+@keyframes rolar {
+  to {
+    transform: translateX(-50%);
+  }
+}

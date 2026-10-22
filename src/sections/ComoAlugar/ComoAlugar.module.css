@@ -1,0 +1,24 @@
+.passos {
+  counter-reset: passo;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-top: 28px;
+  padding: 0;
+  list-style: none;
+}
+
+.passo {
+  counter-increment: passo;
+  padding: 2px 0 2px 18px;
+  border-left: 3px solid var(--lime);
+}
+
+.passo::before {
+  content: counter(passo);
+  display: block;
+  color: var(--lime);
+  font-size: 44px;
+  font-weight: 900;
+  line-height: 1;
+}

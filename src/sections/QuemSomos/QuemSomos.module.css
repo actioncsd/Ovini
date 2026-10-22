@@ -1,0 +1,53 @@
+.quem {
+  display: grid;
+  grid-template-columns: 1.35fr 0.65fr;
+  gap: 36px;
+  align-items: start;
+}
+
+@media (max-width: 760px) {
+  .quem {
+    grid-template-columns: 1fr;
+  }
+}
+
+.quem h2 {
+  font-size: clamp(32px, 5.5vw, 54px);
+}
+
+.abertura {
+  font-size: 19px;
+}
+
+.fechamento {
+  margin-top: 22px;
+  padding-left: 16px;
+  border-left: 4px solid var(--lime);
+  color: var(--tx);
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.diferenciais {
+  display: grid;
+  gap: 14px;
+}
+
+.diferencial {
+  padding: 18px 22px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--lime);
+  border-radius: 18px;
+  transition: transform 0.25s;
+}
+
+.diferencial:hover {
+  transform: translateX(8px);
+}
+
+.diferencial b {
+  display: block;
+  font-size: 22px;
+  color: var(--lime);
+}

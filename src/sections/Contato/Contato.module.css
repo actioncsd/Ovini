@@ -1,0 +1,25 @@
+.canais {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 18px;
+  margin-top: 26px;
+}
+
+.canal {
+  display: block;
+  padding: 22px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  text-decoration: none;
+  transition: border-color 0.25s;
+}
+
+.canal:hover {
+  border-color: var(--lime);
+}
+
+.canal b {
+  display: block;
+  font-size: 20px;
+}

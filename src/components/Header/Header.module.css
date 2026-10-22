@@ -1,0 +1,54 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  padding-top: env(safe-area-inset-top, 0px);
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+}
+
+.conteudo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 58px;
+  transition: height 0.3s;
+}
+
+.logo {
+  display: block;
+  height: 40px;
+  transition: height 0.3s;
+}
+
+.compacto .conteudo {
+  height: 46px;
+}
+
+.compacto .logo {
+  height: 30px;
+}
+
+.nav {
+  display: flex;
+  gap: 22px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.nav a {
+  text-decoration: none;
+  color: var(--mut);
+}
+
+.nav a:hover,
+.nav .destaque {
+  color: var(--lime);
+}
+
+@media (max-width: 760px) {
+  .nav a:not(.destaque) {
+    display: none;
+  }
+}

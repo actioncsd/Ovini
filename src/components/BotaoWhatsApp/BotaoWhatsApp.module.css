@@ -1,0 +1,23 @@
+.botao {
+  position: fixed;
+  right: 16px;
+  bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+  z-index: 6;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+}
+
+.botao::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 999px;
+  border: 2px solid var(--lime);
+  animation: pulsar 2.4s infinite;
+}
+
+@keyframes pulsar {
+  to {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}

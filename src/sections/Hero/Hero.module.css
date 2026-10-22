@@ -1,0 +1,125 @@
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: 56px 0 72px;
+  background:
+    radial-gradient(900px 500px at 85% 0, rgba(155, 224, 0, 0.18), transparent 60%),
+    radial-gradient(600px 400px at 0 100%, rgba(42, 125, 225, 0.16), transparent 60%);
+}
+
+.estrelas {
+  position: absolute;
+  inset: 0;
+  opacity: 0.55;
+  background-image:
+    radial-gradient(2px 2px at 12% 22%, #fff, transparent),
+    radial-gradient(2px 2px at 78% 14%, #fff, transparent),
+    radial-gradient(1.5px 1.5px at 62% 70%, #9be000, transparent),
+    radial-gradient(1.5px 1.5px at 30% 80%, #fff, transparent),
+    radial-gradient(2px 2px at 92% 58%, #fff, transparent);
+  animation: piscar 3.5s ease-in-out infinite alternate;
+}
+
+.conteudo {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1.3fr 0.9fr;
+  gap: 36px;
+  align-items: center;
+}
+
+@media (max-width: 860px) {
+  .conteudo {
+    grid-template-columns: 1fr;
+  }
+}
+
+.titulo span {
+  display: inline-block;
+  animation: subir 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+.titulo em {
+  display: block;
+  font-style: normal;
+  color: var(--lime);
+}
+
+.titulo em span {
+  animation-delay: 0.25s;
+}
+
+.texto {
+  font-size: 20px;
+  animation: subir 0.9s 0.5s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+.texto strong {
+  color: var(--lime);
+}
+
+.cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+  animation: subir 0.9s 0.5s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+.feixe {
+  position: relative;
+  justify-self: center;
+  width: 100%;
+  max-width: 440px;
+}
+
+.feixe::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 55%;
+  width: 130%;
+  height: 140%;
+  transform: translateX(-50%);
+  background: linear-gradient(rgba(155, 224, 0, 0.38), transparent 85%);
+  clip-path: polygon(38% 0, 62% 0, 100% 100%, 0 100%);
+  animation: feixe 3s ease-in-out infinite alternate;
+}
+
+.logo {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 20px 40px rgba(155, 224, 0, 0.25));
+  animation: flutuar 5s ease-in-out infinite;
+}
+
+@keyframes piscar {
+  to {
+    opacity: 0.15;
+  }
+}
+
+@keyframes subir {
+  from {
+    opacity: 0;
+    transform: translateY(46px);
+  }
+}
+
+@keyframes feixe {
+  from {
+    opacity: 0.25;
+  }
+  to {
+    opacity: 0.8;
+  }
+}
+
+@keyframes flutuar {
+  50% {
+    transform: translateY(-12px);
+  }
+}
