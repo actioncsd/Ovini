@@ -40,7 +40,7 @@ Número do WhatsApp, mensagem inicial, Instagram, site e links dos formulários 
 
 ## Deploy
 
-Todo push na branch `main` dispara o workflow `.github/workflows/deploy.yml`, que gera o build e publica no GitHub Pages.
+Todo push na branch `master` dispara o workflow `.github/workflows/deploy.yml`, que gera o build e publica no GitHub Pages.
 
 No repositório, em **Settings → Pages**, a origem (*Source*) deve estar como **GitHub Actions**.
 
